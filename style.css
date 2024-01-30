@@ -711,7 +711,7 @@ footer{
     background-color: #222;
     display: grid;  
     margin-top: -15px;
-    padding: 0;
+    padding: 15px;
 }
 
 .footer-upper{
@@ -817,12 +817,32 @@ footer{
     flex-wrap: wrap;
 }
 
-.portfolio-list img {
-    width: 76px;
-    height: 70px;
-    object-fit: cover;
-    margin: 4px;
-    margin-bottom: 1px;
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.image-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(37, 36, 36, 0.9); /* Adjust the color and transparency of the cover */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+.portfolio-item:hover .image-cover {
+    opacity: 0.6; /* Show the cover on hover */
 }
 
 .footer-lower{
@@ -856,4 +876,20 @@ footer{
 
 .icon-box:hover .icon-up{
     transform: translateY(-10px);
+}
+
+
+
+.recent-posts-footer > div > p{
+    transition:
+     color .15s ease-in-out, 
+     background-color .15s ease-in-out,
+     border-color .15s ease-in-out,
+     box-shadow .15s ease-in-out;
+
+    cursor: pointer;
+}
+
+.recent-posts-footer > div > p:hover{
+    color: white;
 }
