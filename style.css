@@ -71,23 +71,31 @@ ul{
 
 a{
     cursor: pointer;
+    transition:
+     color .15s ease-in-out, 
+     background-color .15s ease-in-out,
+     border-color .15s ease-in-out,
+     box-shadow .15s ease-in-out;
+}
+
+a:hover{
+    color: #2230fa;
 }
 
 .cart-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 20px;
     border-color: black;
     color: white;
 }
 
-.cart-menu div {
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: bold;
-    cursor: pointer;
+
+.cart-menu i:hover {
+    color: darkgrey;
 }
+
+
 
 .background-image {
     position: relative;
@@ -128,21 +136,33 @@ strong{
     color: white;
 }
 
+.category > li > a:hover{
+    color: black;
+}
+
 .btn {
     cursor: pointer;
-    margin: 2px 10px 2px 0px;
-    border-radius: 1.875rem;
-    letter-spacing: .1125rem;
-    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 600;
+    color: #788487;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 2px solid transparent;
     font-size: .75rem;
     line-height: 1.5;
-    display: inline-block;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: "Poppins", Arial;
-    height: 100%;
-    width: 150px;
-    font-weight: bold;
+    border-radius: 1.875rem;
+    padding: 1.1875rem 2.25rem;
+    align-items: center;
+    transition:
+     color .15s ease-in-out, 
+     background-color .15s ease-in-out,
+     border-color .15s ease-in-out,
+     box-shadow .15s ease-in-out;
 }
 
 p {
@@ -179,10 +199,21 @@ p {
     color: white;
 }
 
+.start-btn:hover{
+    background-color: #2230fa;
+    border-color: #2230fa;
+}
+
 .learn-btn {
     background-color: transparent;
     border-color: white;
     color: white;
+}
+
+.learn-btn:hover{
+    background-color: white;
+    border-color: black;
+    color: black;
 }
 
 .customers-msg{
@@ -237,6 +268,7 @@ p {
 .about-list{
     max-width: 960px;
     margin: auto;
+    margin-top: 50px;
 }
 
 .about-list > ul{
@@ -245,6 +277,15 @@ p {
 
 .about-list > ul > li{
     list-style: none;
+}
+
+.about-list > ul > li > span{
+    position: relative;
+    height: 38px;
+    width: 38px;
+    line-height: 2.375rem;
+    font-size: xx-large;
+    color: #505cfd;
 }
 
 .about-list > ul > li > div > h6{
@@ -328,6 +369,8 @@ a{
     flex-wrap: wrap;
     width: 960px;
     margin: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 
 .about-2 > div{
@@ -336,11 +379,15 @@ a{
     margin-bottom: 10px;
     width: 100%;
     height: auto;
+    text-align: left;
+    padding-right: 5vh;
+    padding-left: 5vh;
 }
 
 .about-2 > div > div > h6{
     margin: 0 0 12px;
     font-size: .875rem;
+    font-weight: 400;
 }
 
 .about-2 > div > div > p{
@@ -351,6 +398,11 @@ a{
     text-align: left;
 }
 
+.title-1{
+    font-weight: 500;
+    color: black;
+}   
+
 .flex-light-back{
     background-color: #f8f8f8;;
     background-position: 50%;
@@ -358,6 +410,8 @@ a{
     background-size: cover;
     padding: 120px 0 100px;
 }
+
+
 
 
 .flex-light-cont{
@@ -500,6 +554,12 @@ a{
     height: 50px; 
 }
 
+.about-us-btn:hover{
+    background-color: #505cfd;
+    border-color: #505cfd;
+    color: white;
+}
+
 .background-image-2{
     position: relative;
     background: url("images\module-12.jpg") center/cover no-repeat;
@@ -512,7 +572,7 @@ a{
     height: 100%;
     width: 100%;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
 .latest-article > .container > h1{
@@ -525,15 +585,16 @@ a{
 
 .posts {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0 20px;
 }
 
 .post-item {
-    text-align: center;
+    text-align: left;
     max-width: 350px;
     width: 100%;
     box-sizing: border-box;
+    margin: 15px;
 }
 
 .post img {
@@ -551,8 +612,23 @@ a{
     margin-top: 10px;
 }
 
+
+
+.post-info h3{
+    cursor: pointer;
+    transition:
+     color .15s ease-in-out, 
+     background-color .15s ease-in-out,
+     border-color .15s ease-in-out,
+     box-shadow .15s ease-in-out;
+}
+
+.post-info h3:hover{
+    color: #505cfd;
+}
+
 .post-info h3, .post-info p {
-    margin: 0;
+    margin: 10px;
     text-align: left;
 }
 
@@ -565,6 +641,7 @@ a{
 }
 
 .post-info a {
+    margin: 10px;
     display: inline-block;
     margin-top: 10px;
     text-align: left;
@@ -575,7 +652,7 @@ a{
     background-color: #f8f8f8;
     justify-content: center;
     align-items: center;
-    height: 20vh; 
+    height: 40vh; 
     text-align: center;
 }
 
@@ -585,18 +662,19 @@ a{
 
 .numbers > div {
     text-align: center;
-    margin: 0 80px; /* Adjust the margin between items as needed */
+    margin: 0 80px; 
 }
 
 .numbers > div > .number-icon{
     width: 100%;
     display: grid;
     place-items: center;
+    padding-top: 10px;
 }
 
 .background-image-3{
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .number-icon > span{
@@ -631,7 +709,7 @@ a{
 footer{
     background-color: #222;
     display: grid;
-    margin: 0;
+    margin: -15px;
     padding: 0;
 }
 
@@ -640,6 +718,7 @@ footer{
     width: 75%;
     margin: auto;
     margin-top: 70px;
+    height: 50vh;
 }
 
 .footer-upper > *{
@@ -668,6 +747,27 @@ footer{
     line-height: 1.8;
     color: #788487;
     text-align: left;
+}
+
+.social-media-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.social-media-icons > span{
+    color: #cecece;
+    font-size: 13px;
+    cursor: pointer;
+    transition:
+     color .15s ease-in-out, 
+     background-color .15s ease-in-out,
+     border-color .15s ease-in-out,
+     box-shadow .15s ease-in-out;
+}
+
+.social-media-icons > span:hover{
+    color: white;
 }
 
 .recent-posts-footer > div > p{
@@ -726,9 +826,10 @@ footer{
 .footer-lower{
     display: flex;
     justify-content: center;
-    height: 3%;
-    border-top: .25px solid;
-    border-color: #f8f8f8;
+    align-items: center;
+    height: 9vh;
+    border-top: thin groove;
+    border-color: rgba(51, 51, 51, 0.6)
 }
 
 .footer-lower > p{
@@ -743,6 +844,14 @@ footer{
     font-size: .8rem;
     font-weight: 400;
     line-height: 1.8;
-    color: #f8f8f8; 
+    color: #f8f8f8;
     text-align: left;
+}
+
+.icon-up{
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-box:hover .icon-up{
+    transform: translateY(-10px);
 }
