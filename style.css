@@ -343,18 +343,49 @@ a{
     color: #788487;
 }
 
-.portfolio{
+.portfolio {
     position: relative;
-    height: 674.65;
+    height: 674.65px; 
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
-.portfolio-item{
+.portfolio-item {
     flex: 1 0 calc(33.33% - 10px);
     margin: 5px;
+    position: relative; 
 }
+
+.portfolio-item > div {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.portfolio-item > div > h4{
+    padding-top: 15px;
+    padding-bottom: -10px;
+    font-weight: 500;
+}
+
+.portfolio-item > div > p{
+    font-family: "Playfair Display", sans-serif;
+    font-style: italic;
+    font-size: small;
+    color: #a3a6a8;
+}
+
+.portfolio-item:hover > img {
+    transform: translateY(-100px);
+}
+
+.portfolio-item:hover > div {
+    z-index: 1;
+    transform: translateY(-100px);
+    opacity: 1; 
+}
+
 
 .portfolio-item img{
     width: 100%;
@@ -500,6 +531,33 @@ a{
     background-color: #f9f9f9;
 }
 
+.creative-team-contact{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0%;
+    width: 100%;
+    height: 97%;
+    border-radius: 2px;
+    display: none;
+}
+
+.creative-team-item{
+    position: absolute;
+    background-color: rgb(37, 36, 36, 0.9);
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 98.3%;
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+    display: none;
+}
+
+.team-item:hover{
+    transform: translateY(-5px);
+}
+
 .creative-people > .container > h1{
     font-size: 2.625rem;
     font-family: "Poppins", Arial;
@@ -565,18 +623,17 @@ a{
     font-family: Arial, Helvetica, sans-serif;
     margin: 2% 0;
     z-index: 1;
-    background-color: transparent;
 }
 
 .background-image-2{
     background-image: url("https://i.ibb.co/99Sxgq2/module-12.jpg");
-    z-index: -1px;
+    z-index: -1000px;
     position: absolute;
     width: 100%;
     height: 80%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
 }
 
@@ -629,7 +686,7 @@ a{
     background-color: #f8f8f8;
     padding-top: 50px;
     z-index: 2;
-    margin-top: -50px;
+    margin-top: 50px;
 }
 
 .plans{
@@ -657,8 +714,8 @@ a{
 }
 
 .icon-name {
-    border-bottom-width: 1px; /* Set the desired border width */
-    border-bottom-style: groove; /* Set the desired border style */
+    border-bottom-width: 1px;
+    border-bottom-style: groove;
     border-image: linear-gradient(to right, transparent 0%, transparent 10%, rgb(239, 239, 239) 10%, rgb(239, 239, 239) 90%, transparent 90%, transparent 100%);
     border-image-slice: 1;
 }
@@ -981,22 +1038,38 @@ footer{
     cursor: pointer;
 }
 
-
-
 .image-cover {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgb(37, 36, 36, 0.9); /* Adjust the color and transparency of the cover */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth transition effect */
+    height: 92%;
+    background-color: rgb(37, 36, 36, 0.9); opacity: 0;
+    transition: opacity 0.3s ease; 
 }
 
 .portfolio-item:hover .image-cover {
-    opacity: 0.6; /* Show the cover on hover */
+    opacity: 0.6;
 }
+
+.portfolio-image{
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+    cursor: pointer;
+    flex: 1 0 calc(33.33% - 10px);
+}
+
+
+.portfolio-image:hover .image-cover {
+    opacity: 0.6;
+}
+
+.portfolio-image img{
+    width: 100%;
+    height: auto;
+}
+
 
 .footer-lower{
     display: flex;
