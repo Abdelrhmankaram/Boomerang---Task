@@ -538,13 +538,14 @@ a {
 }
 
 .creative-team-contact {
-    position: absolute;
+    position: inherit;
     margin: 0;
     padding: 0;
     top: 0%;
     width: 100%;
     height: 97%;
     border-radius: 2px;
+    z-index: -1px;
     display: none;
 }
 
@@ -557,7 +558,6 @@ a {
     height: 98.3%;
     border-radius: 2px;
     transition: all 0.4s ease-in-out;
-    display: none;
 }
 
 .team-item:hover {
@@ -589,12 +589,11 @@ a {
     padding: 0 10px;
 }
 
-.team-item>div {
+.team-item div {
     position: relative;
     border-radius: .1875rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
-    margin: 0 0 20px;
-
+    margin-bottom: 25px;
 }
 
 .team-item img {
@@ -605,6 +604,7 @@ a {
     display: block;
     border: none;
     padding: 0;
+    background-color: rgb(37, 36, 36, 1);
 }
 
 .about-us-btn {
@@ -667,20 +667,14 @@ a {
     display: inline-block;
     overflow: hidden;
     border-radius: 50%;
-    /* Creates a circular shape */
     border: 6px solid rgba(128, 128, 128, 0.4);
-    /* Set the alpha value to 0.5 for 50% opacity */
 }
 
 .img-border img {
     width: 70px;
-    /* Adjust the size of the image */
     height: 70px;
-    /* Adjust the size of the image */
     border-radius: 50%;
-    /* Ensures the image inside the circle is also circular */
     object-fit: cover;
-    /* Prevents distortion of the image */
     display: block;
 }
 
@@ -760,9 +754,7 @@ a {
     font-size: 1rem;
     max-width: 70%;
     text-align: center;
-    /* Center the text */
     margin: 0 auto;
-    /* Center the div itself */
 }
 
 .plan-item>.price-desc>button {
