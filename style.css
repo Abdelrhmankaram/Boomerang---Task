@@ -613,6 +613,7 @@ a {
     color: #505cfd;
     width: 150px;
     height: 50px;
+    transition: all 0.15s ease-in-out;
 }
 
 .about-us-btn:hover {
