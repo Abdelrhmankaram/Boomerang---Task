@@ -411,9 +411,6 @@ a{
     padding: 120px 0 100px;
 }
 
-
-
-
 .flex-light-cont{
     max-width: 1000px;
     width: 100%;
@@ -567,17 +564,19 @@ a{
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     margin: 2% 0;
+    z-index: 1;
+    background-color: transparent;
 }
 
 .background-image-2{
     background-image: url("https://i.ibb.co/99Sxgq2/module-12.jpg");
-    z-index: -100px;
+    z-index: -1px;
     position: absolute;
     width: 100%;
     height: 80%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 
@@ -624,6 +623,99 @@ a{
 .quote-auth{
     color: #cecece;
     font-size: small;
+}
+
+.products{
+    background-color: #f8f8f8;
+    padding-top: 50px;
+    z-index: 2;
+    margin-top: -50px;
+}
+
+.plans{
+    display: flex;
+    max-width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1000px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.plan-item{
+    text-align: center;
+    width: 30vw;
+    border-right: 1px groove;
+}
+
+.plans .plan-item:last-child{
+    border-right: none;
+}
+
+.plan-item > *{
+    padding: 25px;
+}
+
+.icon-name {
+    border-bottom-width: 1px; /* Set the desired border width */
+    border-bottom-style: groove; /* Set the desired border style */
+    border-image: linear-gradient(to right, transparent 0%, transparent 10%, rgb(239, 239, 239) 10%, rgb(239, 239, 239) 90%, transparent 90%, transparent 100%);
+    border-image-slice: 1;
+}
+
+
+.icon-name > span{
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+
+.icon-name > p{
+    font-weight: lighter;
+    font-size: x-small;
+    font-weight: 200;
+    letter-spacing: 2px;
+    color: #222;
+}
+
+.plan-item > .price-desc > h2{
+    padding: 25px;
+    padding-top: 0;
+    font-size: 4.5rem;
+}
+
+.plan-item > .price-desc > div {
+    padding: 25px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    color: #788487;
+    font-size: 1rem;
+    max-width: 70%;
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center the div itself */
+}
+
+.plan-item > .price-desc > button {
+    height: 60%;    
+}
+
+.clients-badges{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 50px;
+    
+}
+
+.clients-badges div img{
+    transition: all .15s ease-in-out
+}
+
+.clients-badges div img:hover{
+    opacity: 1;
+}
+
+.clients-badges > div > img{
+    opacity: 0.6;
 }
 
 .latest-article{
