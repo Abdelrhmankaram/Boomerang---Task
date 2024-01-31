@@ -690,13 +690,15 @@ a {
 }
 
 .products {
+    position: relative;
     background-color: #f8f8f8;
     padding-top: 50px;
+    width: 100%;
     z-index: 2;
-    margin-top: 50px;
 }
 
 .plans {
+    position: absolute;
     display: flex;
     max-width: 75%;
     margin-right: auto;
@@ -704,6 +706,8 @@ a {
     z-index: 1000px;
     background-color: white;
     border-radius: 2px;
+    top: -80px;
+    left: 12vw;
 }
 
 .plan-item {
@@ -763,22 +767,34 @@ a {
 }
 
 .clients-badges {
+    height: 75vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     padding: 50px;
 
 }
 
-.clients-badges div img {
-    transition: all .15s ease-in-out
+.clients-badges > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 46vh;
 }
 
-.clients-badges div img:hover {
+.clients-badges div div img {
+    transition: all .15s ease-in-out;
+    margin: 20px;
+}
+
+.clients-badges div div img:hover {
     opacity: 1;
 }
 
-.clients-badges>div>img {
+.clients-badges div img {
     opacity: 0.6;
 }
 
