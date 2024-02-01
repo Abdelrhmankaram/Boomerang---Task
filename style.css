@@ -40,7 +40,7 @@ header {
     position: absolute;
     width: 100%;
     z-index: 1000;
-    border: 10px;
+    border-bottom: thin groove rgba(110, 110, 110, 0.3);
 }
 
 .nav-border {
@@ -93,7 +93,9 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     border-color: black;
+    height: 100%;
     color: white;
+    border-left: thin groove rgba(110, 110, 110, 0.3);
 }
 
 .cart-menu i:hover {
