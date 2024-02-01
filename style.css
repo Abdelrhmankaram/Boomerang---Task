@@ -705,7 +705,7 @@ a {
     margin-left: auto;
     z-index: 1000px;
     background-color: white;
-    border-radius: 2px;
+    border-radius: 3px;
     top: -80px;
     left: 12vw;
 }
@@ -714,6 +714,20 @@ a {
     text-align: center;
     width: 30vw;
     border-right: 1px groove;
+    transition: all 0.3s ease-in-out;
+}
+
+.plan-item:hover{
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+    /* transform: scale(1.01);  */
+}
+
+.plan-item > *{
+    transition: all 0.3s ease-in-out;
+}
+
+.plan-item:hover >*{
+    transform: scale(1.05);
 }
 
 .plans .plan-item:last-child {
