@@ -240,6 +240,7 @@ p {
 }
 
 .container {
+    position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -583,16 +584,18 @@ a {
 
 
 .team-item {
+    position: relative;
     flex: 0 0 33.33%;
     max-width: 33.33%;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 10px 10px;
+    overflow: hidden;
+    font-size: 0px;
 }
 
-.team-item div {
-    position: relative;
+.team-item member-img {
     border-radius: .1875rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     margin-bottom: 25px;
 }
 
@@ -604,7 +607,75 @@ a {
     display: block;
     border: none;
     padding: 0;
-    background-color: rgb(37, 36, 36, 1);
+}
+
+.team-con {
+    top: 10px;
+    width: 80%;
+    position: absolute;
+    width: 94.6%;
+    overflow: hidden;
+    height: 94.6%;
+    text-align: left;
+    border-radius: .1875rem;
+    background-color: rgba(51, 51, 51, 0.6);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.team-con:hover{
+    opacity: 1;
+}
+
+.team-social {
+    position: relative;
+    top: -10%;
+    margin-left: 90%;
+    transform: translateY(65%);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.team-info {
+    margin-top: 60%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: left;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.team-item:hover .team-con > .team-social{
+    opacity: 1;
+    transform: translateY(75%);
+}
+
+.team-item:hover .team-con > .team-info{
+    opacity: 1;
+    transform: translateY(30%);
+}
+
+.team-con > .team-info > .name{
+    color: white;
+    font-size: .9rem;
+    font-weight: 300;
+}
+
+.team-con > .team-info > .job-title{
+    color: #cecece;
+    font-size: .75rem;
+    font-weight: 300;
+}
+
+.team-social > ul > li > span{
+    color: white;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.team-social > ul > li > span:hover{
+    color: #a3a6a8;
 }
 
 .about-us-btn {
@@ -1083,7 +1154,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 93%;
+    height: 92%;
     background-color: rgb(37, 36, 36, 0.9);
     opacity: 0;
     transition: opacity 0.3s ease;
