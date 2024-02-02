@@ -61,27 +61,13 @@ nav ul {
 
 nav ul li {
     height: 101%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     margin-left: 15px;
     margin-right: 15px;
     font-weight: bold;
-    border-bottom-width: 1px;
-    border-bottom-style: groove;
-    border-image: linear-gradient(to right, transparent 0%, transparent 20%, rgb(239, 239, 239) 20%, rgb(239, 239, 239) 80%, transparent 80%, transparent 100%);
-    border-image-slice: 1;
-    transition: all .4s ease-in-out;
-}
-
-nav ul li:hover{
-    border-bottom-style: groove;
-    border-image: linear-gradient(to right, transparent 0%, transparent 0%, rgb(239, 239, 239) 0%, rgb(239, 239, 239) 100%, transparent 100%, transparent 100%);
-    border-image-slice: 1;
-}
-
-nav ul li:hover div{
-    visibility: visible;
+    border-bottom: solid thin white;
 }
 
 nav ul li a {
@@ -114,53 +100,6 @@ a {
 
 a:hover {
     color: #2230fa;
-}
-
-.home-inner-menu{
-    position: absolute;
-    display: flex;
-    visibility: hidden;
-    background: url("images/menu-3.jpg") center no-repeat;
-    top: 100%;
-    left: 33%;
-    width: 30vw;
-    height: 50vh;
-    border-radius: 0.185rem;
-    overflow: hidden;
-    transition: all 0.15s ease-in-out;
-}
-
-.home-inner-menu > div{
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    transition: all 0.15s ease-in-out;
-}
-
-.home-inner-menu div .inner-title{
-    font-size: 1.0rem;
-    cursor: default;
-    transition: all 0.15s ease-in-out;
-}
-
-.home-inner-menu div a{
-    color: #a3a6a8;
-    font-size: .90rem;
-    font-weight: 100;
-    margin-top: 16px;
-}
-
-.home-inner-menu div a:hover{
-    color: #d3d6d8;
-}
-
-.home-inner-menu > div:first-child{
-    margin-left: 50px;
-}
-
-.home-inner-menu > div:last-child{
-    margin-left: 50px;
 }
 
 .cart-menu {
@@ -887,6 +826,7 @@ a {
 
 .plan-item:hover{
     box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+    /* transform: scale(1.01);  */
 }
 
 .plan-item > *{
