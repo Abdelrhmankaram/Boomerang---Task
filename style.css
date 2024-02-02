@@ -80,6 +80,10 @@ nav ul li:hover{
     border-image-slice: 1;
 }
 
+nav ul li:hover div{
+    display: flex;
+}
+
 nav ul li a {
     text-decoration: none;
     color: white;
@@ -110,6 +114,51 @@ a {
 
 a:hover {
     color: #2230fa;
+}
+
+.home-inner-menu{
+    position: absolute;
+    display: none;
+    background: url("images/menu-3.jpg") center no-repeat;
+    top: 105%;
+    left: 33%;
+    width: 30vw;
+    height: 50vh;
+    border-radius: 0.185rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-inner-menu > div{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    
+}
+
+.home-inner-menu div .inner-title{
+    font-size: 1.0rem;
+    cursor: default;
+}
+
+.home-inner-menu div a{
+    color: #a3a6a8;
+    font-size: .90rem;
+    font-weight: 100;
+    margin-top: 16px;
+}
+
+.home-inner-menu div a:hover{
+    color: #d3d6d8;
+}
+
+.home-inner-menu > div:first-child{
+    margin-left: 50px;
+}
+
+.home-inner-menu > div:last-child{
+    margin-left: 50px;
 }
 
 .cart-menu {
