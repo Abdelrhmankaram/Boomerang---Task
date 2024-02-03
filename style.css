@@ -79,7 +79,7 @@ nav ul li {
     width: 100%;
     left: 0;
     background-color: white;
-    transition: 0.3s;
+    transition: 0.15s;
     transition-timing-function: ease-in-out;
     transform: scaleX(.3);
 }
@@ -95,8 +95,12 @@ nav ul li a {
     font-size: 13px;
 }
 
-.nav-bar > ul > li:hover a{
+.nav-bar > ul > li:hover .nave-title{
     color: darkgrey;
+}
+
+.nav-bar > ul > li:hover div{
+    display: flex;
 }
 
 ul {
@@ -110,6 +114,110 @@ a {
         background-color .15s ease-in-out,
         border-color .15s ease-in-out,
         box-shadow .15s ease-in-out;
+}
+.drop-down-home{
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    background-image: url("images/menu-3.jpg");
+    border-radius: .1875rem;
+    width: 28vw;
+    height: 56vh;
+    top: 77px;
+    left: 0px;
+}
+
+.drop-down-home > div {
+    text-align: left;
+}
+
+.drop-down-home > div > ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.drop-down-home p{
+    color: #222;
+    cursor: default;
+}
+
+.drop-down-home a{
+    color: #788487;   
+}
+
+.drop-down-home a:hover{
+    color: #cecece;
+}
+
+.drop-down-pages{
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    background-image: url("images/menu-1.jpg");
+    border-radius: .1875rem;
+    width: 32.5vw;
+    height: 42vh;
+    top: 77px;
+    left: 0px;
+}
+
+.drop-down-pages > div {
+    text-align: left;
+}
+
+.drop-down-pages > div > ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.drop-down-pages p{
+    color: #222;
+    cursor: default;
+}
+
+.drop-down-pages a{
+    color: #788487;   
+}
+
+.drop-down-pages a:hover{
+    color: #cecece;
+}
+
+.drop-down-components{
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    background-image: url("images/menu-2.jpg");
+    border-radius: .1875rem;
+    width: 40.8vw;
+    height: 56vh;
+    top: 77px;
+    left: 0px;
+}
+
+.drop-down-components > div {
+    text-align: left;
+}
+
+.drop-down-components > div > ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.drop-down-components p{
+    color: #222;
+    cursor: default;
+}
+
+.drop-down-components a{
+    color: #788487;   
+}
+
+.drop-down-components a:hover{
+    color: #cecece;
 }
 
 a:hover {
