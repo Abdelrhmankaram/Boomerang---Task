@@ -81,7 +81,7 @@ nav ul li {
     background-color: white;
     transition: 0.3s;
     transition-timing-function: ease-in-out;
-    transform: scaleX(.5);
+    transform: scaleX(.3);
 }
 
 .nav-bar > ul > li:hover::after{
@@ -125,28 +125,37 @@ a:hover {
     color: white;
     border-left: thin groove rgba(86, 86, 86, 0.574);
 }
+.cart-menu:first-child{
+    padding-right: 5px;
+}
 
-.noti {
+.cart-menu:last-child{
+    padding-left: 5px;
+}
+
+
+.cart::before{
+    content: "3";
     position: absolute;
-    background: #505cfd;
-    border-radius: 100%;
-    height: 15px;
-    width: 15px;
-    left: 1450px;
-    top: 15px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 16px !important;
-    font-size: .5rem;
-    color: #fff;
-    cursor: default;
+    font-size: 10px;
+    right: 3.6%;
+    width: 13px;
+    height: 13px;
+    top: 16px;
+    border-radius: 50%;
+    background-attachment: fixed;
+    background-color: #505cfd;
 }
 
 .noti:hover {
     color: #fff;
 }
 
-.cart-menu i:hover {
+.cart-menu div{
+    cursor: pointer;
+}
+
+.cart-menu div:hover i{
     color: darkgrey;
 }
 
